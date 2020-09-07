@@ -17,9 +17,8 @@ class ShineFunction {
 public:
 	static int FindKey() {
 		bool key_find = true;
-		std::cout << "Press button" << "\n";
-		while (key_find)
-		{
+		std::cout << "Press button \n";
+		while (key_find) {
 			if (_kbhit()) {
 				int key = _getch();
 				key_find = false;
@@ -37,22 +36,22 @@ public:
 //
 class Shine {
 public:
-	static void GameField(const int x_length, const int y_length, const char sym_leftright_part, const char sym_downbot_part) {
+	static void GameField(const int x_length, const int y_length, const char sym_leftright_part, const char sym_downtop_part) {
 		for (int i = 0; i < x_length; i++) // y = 0
-			std::cout << sym_downbot_part;
+			std::cout << sym_downtop_part;
 		std::cout << "\n";
-		for (int y = 0; y < (y_length-2); y++) {
+		for (int y = 0; y < (y_length - 2); y++) {
 			for (int x = 0; x < x_length; x++) {
 				if ( x == 0 || x == (x_length - 1) )
 					std::cout << sym_leftright_part;
 				else 
 					std::cout << ' ';
 			}
-			std::cout << "\n";
+			std::cout << '\n';
 		}
 		for (int i = 0; i < x_length; i++)  // y = y_length
-			std::cout << sym_downbot_part;
-		std::cout << "\n";
+			std::cout << sym_downtop_part;
+		std::cout << '\n';
 	}
 	//
 	static void VolumeObject(int x_position, int y_position, const int x_length, const int y_length, const char sym) {

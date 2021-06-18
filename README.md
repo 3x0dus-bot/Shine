@@ -1,3 +1,3 @@
 # Shine
 
-Reliase: 2020
+Release: 2020
